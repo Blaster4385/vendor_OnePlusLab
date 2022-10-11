@@ -7,7 +7,8 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     OnePlusLab \
     DaxUI \
-    daxService
+    daxService \
+    TouchGestures
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/OnePlusLab/privapp-permissions-OnePlusLab.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-OnePlusLab.xml
