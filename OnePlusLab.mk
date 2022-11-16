@@ -6,8 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_PACKAGES += \
     OnePlusLab \
-    DaxUI \
-    daxService \
     TouchGestures
 
 PRODUCT_COPY_FILES += \
@@ -17,7 +15,7 @@ PRODUCT_COPY_FILES += \
     vendor/OnePlusLab/rootdir/etc/init.onepluslab.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.onepluslab.rc
 
 # OnePlus Dolby
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/OnePlusDolby/dolby/dax-default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/dax-default.xml \
     $(LOCAL_PATH)/OnePlusDolby/dolby/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     $(LOCAL_PATH)/OnePlusDolby/dolby/config-com.dolby.daxappui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.dolby.daxappui.xml \
