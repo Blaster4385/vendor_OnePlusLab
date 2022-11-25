@@ -45,7 +45,6 @@ public class Startup extends BroadcastReceiver {
         restore(GameModeSwitch.getFile(), enabled);
                }
         OnePlusLab.restoreSliderStates(context);
-        org.aosp.device.OnePlusLab.doze.DozeUtils.checkDozeService(context);
         VibratorStrengthPreference.restore(context);
     }
 

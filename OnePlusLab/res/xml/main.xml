@@ -70,16 +70,6 @@
                     android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings" />
         </Preference>
 
-        <Preference
-            android:key="advanced_doze_settings"
-            android:icon="@drawable/ic_doze"
-            android:title="@string/ambient_display_gestures_title"
-            android:summary="@string/ambient_display_gestures_summary"
-            android:persistent="false" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetClass="org.aosp.device.OnePlusLab.DozeSettingsActivity" />
-        </Preference>
-
         <SwitchPreference
             android:key="hbm"
             android:icon="@drawable/ic_hbm_mode"

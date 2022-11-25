@@ -51,7 +51,6 @@ import androidx.preference.TwoStatePreference;
 import java.util.Arrays;
 
 import org.aosp.device.OnePlusLab.Constants;
-import org.aosp.device.OnePlusLab.doze.DozeSettingsActivity;
 import org.aosp.device.OnePlusLab.FileUtils;
 import org.aosp.device.OnePlusLab.R;
 
@@ -63,7 +62,6 @@ public class OnePlusLab extends PreferenceFragment
 
     public static final String KEY_AUTO_HBM_SWITCH = "auto_hbm";
     public static final String KEY_AUTO_HBM_THRESHOLD = "auto_hbm_threshold";
-    public static final String KEY_DOZE = "advanced_doze_settings";
     public static final String KEY_FPS_INFO = "fps_info";
     public static final String KEY_FPS_INFO_POSITION = "fps_info_position";
     public static final String KEY_FPS_INFO_COLOR = "fps_info_color";
@@ -81,7 +79,6 @@ public class OnePlusLab extends PreferenceFragment
     private static TwoStatePreference mHBMModeSwitch;
 
     private CustomSeekBarPreference mFpsInfoTextSizePreference;
-    private Preference mDozeSettings;
     private ListPreference mBottomKeyPref;
     private ListPreference mMiddleKeyPref;
     private ListPreference mTopKeyPref;
@@ -92,14 +89,6 @@ public class OnePlusLab extends PreferenceFragment
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getContext());
         addPreferencesFromResource(R.xml.main);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // DozeSettings Activity
-        mDozeSettings = (Preference)findPreference(KEY_DOZE);
-        mDozeSettings.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), DozeSettingsActivity.class);
-            startActivity(intent);
-            return true;
-        });
 
         // HBM
         mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
